@@ -39,6 +39,12 @@ function listDir(dirPath) {
     .sort((a,b) => b.name.localeCompare(a.name));
 }
 
+// Ensure data dirs exist
+['captures', 'uploads'].forEach(d => {
+  const p = path.join(BASE, d);
+  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
+});
+
 const server = http.createServer((req, res) => {
   const uri = url.parse(req.url).pathname;
 
