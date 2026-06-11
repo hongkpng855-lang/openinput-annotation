@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+.venv/
+
+# Backup HTML
+*_backup.html
+*_backup*.html
+
+# Build / archive
+archive/
+output/
+stage1_crops/
+recordings/
+ffmpeg/
+
+# Binary tools
+tools/*.exe
+tools/*.dll
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Logs
+nav_log.txt
+*.log
+
+# Node
+node_modules/
